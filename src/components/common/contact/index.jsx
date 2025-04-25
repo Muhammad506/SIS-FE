@@ -40,7 +40,7 @@ const Contact = () => {
       </section>
 
       {/* Decorative Bottom Element */}
-      <div className="bg-green p-4 rounded-b-full w-[90%] sm:w-[80%] max-w-7xl h-12 mt-[-32px] md:mt-[-16px] shadow-md"></div>
+      <div className="bg-green p-4 rounded-b-full sm:w-[90%] !md:w-[80%] xl:w-[70%] max-w-7xl h-12 mt-[-32px] md:mt-[-16px] shadow-md"></div>
     </main>
   );
 };
