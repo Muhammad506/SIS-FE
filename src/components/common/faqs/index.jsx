@@ -4,26 +4,30 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 const Faqs = () => {
   const faqItems = [
     {
-      question: "How does Solar Plate Monitoring work on the platform?",
+      question: "How does the real-time solar plate monitoring system work?",
       answer:
-        "Our Solar Plate Monitoring feature provides real-time insights into the performance of your solar panels. You can track parameters such as energy production, efficiency levels, and any potential issues directly from your dashboard. This ensures that your solar system is always running at optimal efficiency.",
+        "Our real-time solar plate monitoring system provides instant data on each solar plate’s performance, including energy production, temperature, and overall health. This allows you to stay updated on your solar system’s status and quickly address any potential issues to ensure optimal performance.",
+    },
+    {
+      question: "How does energy usage tracking help optimize my solar system?",
+      answer:
+        "The energy usage tracking feature helps you monitor your solar system's energy production and consumption. By analyzing detailed usage patterns over time, you can optimize your system’s efficiency, reduce wastage, and potentially lower your electricity bills.",
+    },
+    {
+      question: "What does the active solar plates display feature show?",
+      answer:
+        "The active solar plates display feature highlights which panels are actively generating power. It gives you a clear visualization of your system’s performance, helping you identify which panels are functioning well and which ones may need attention to keep the system running at peak efficiency.",
     },
     {
       question:
-        "Can I track energy usage and identify wastage through the system?",
+        "Can I control my solar panels remotely with the On/Off Control System?",
       answer:
-        "Yes, our Energy Usage Tracing feature helps you monitor daily, weekly, and monthly energy consumption. The Current Wastage Alert feature notifies you of any energy inefficiencies or wastage, enabling you to take corrective actions promptly to maximize energy savings.",
+        "Yes! Our On/Off Control System allows you to remotely manage each panel, enabling you to turn them on or off as needed. Whether for maintenance or optimizing energy production during peak hours, this feature gives you complete control of your solar panels with an easy-to-use interface.",
     },
     {
-      question:
-        "What is the Active Solar Plates Display, and how does it help?",
+      question: "Can I monitor and control my solar system from anywhere?",
       answer:
-        "The Active Solar Plates Display provides a visual overview of all active solar panels in your system. It highlights operational status, live energy output, and any inactive plates that may require attention, simplifying maintenance and performance tracking.",
-    },
-    {
-      question: "How does the On/Off Control and Maintenance Scheduling work?",
-      answer:
-        "The On/Off Control feature allows you to remotely switch solar panels or systems on and off for better energy management. Additionally, our Maintenance Schedule feature ensures timely reminders and notifications for routine checkups and maintenance, prolonging the life of your solar system.",
+        "Absolutely! With the remote access feature, you can manage your solar energy system from anywhere in the world. Whether you are at home or traveling, you can monitor performance and control settings, ensuring you stay connected and in control of your solar system no matter where you are.",
     },
   ];
 
@@ -34,7 +38,7 @@ const Faqs = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-full bg-[#F7F7F7] pt-6 lg:pt-10 px-4">
+    <div className="flex items-center justify-center h-full  pt-6 lg:pt-10 px-4">
       <div className="max-w-7xl container mx-auto px-2 md:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center gap-8">
           {/* FAQ Text Section */}
@@ -92,7 +96,7 @@ const Faqs = () => {
 
           {/* Right-Side Image  */}
           <div className="lg:block hidden py-10 lg:w-1/2">
-            <div className=" h-full flex justify-end lg:pt-16 items-center relative ">
+            <div className=" h-full flex justify-end lg:pt-40 items-center relative ">
               <img
                 src="Faq.svg"
                 alt="Solar Worker"

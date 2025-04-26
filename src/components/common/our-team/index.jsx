@@ -24,7 +24,7 @@ const OurTeam = () => {
   ];
 
   return (
-    <main className="py-8 bg-[url('https://modinatheme.com/html/solarglow-html/assets/img/testimonial/map-shape.png')] bg-cover bg-center">
+    <main className="py-6 md:py-12 bg-[url('https://modinatheme.com/html/solarglow-html/assets/img/testimonial/map-shape.png')] bg-cover bg-center">
       <div className="text-center px-2 md:px-6 lg:px-20 max-w-7xl mx-auto">
         {/* Heading */}
         <div className="gap-4 flex flex-col justify-center items-center text-center">
@@ -48,7 +48,7 @@ const OurTeam = () => {
                 alt={member.name}
                 className="rounded-full w-28 h-28 object-cover mb-4 border-4 border-[#0f1c47]"
               />
-              <h2 className="text-xl text-[#0f1c47] mb-2 text-nowrap font-krona">
+              <h2 className="text-xl text-[#0f1c47] mb-2 text-nowrap font-semibold">
                 {member.name}
               </h2>
               <p className="text-green font-funnel font-semibold mb-2">

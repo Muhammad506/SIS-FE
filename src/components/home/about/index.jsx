@@ -15,10 +15,10 @@ const About = () => {
         {/* Content Section */}
         <div className="lg:w-[55%] space-y-6 self-center">
           <div className="space-y-4">
-            <h1 className="text-green text-sm md:text-base uppercase font-bold font-funnel tracking-wider">
+            <h1 className="text-green text-sm md:text-base uppercase font-bold  tracking-wider">
               About Us
             </h1>
-            <h2 className="text-3xl text-start xl:leading-14   md:text-4xl xl:text-5xl tracking-wide md:tracking-tight font-semibold  w-full md:w-[70%] lg:w-[90%] xl:w-[90%]  text-gray-900 ">
+            <h2 className="text-3xl text-start xl:leading-14 md:text-4xl xl:text-5xl tracking-wide md:tracking-tight font-semibold  w-full md:w-[70%] lg:w-[90%] xl:w-[90%]  text-gray-900 ">
               Get Connected for Enhanced Vision
             </h2>
           </div>
