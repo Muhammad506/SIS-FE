@@ -26,13 +26,15 @@ const App = () => {
 const Layout = () => {
   const location = useLocation();
 
-  // Scroll to top on route change
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
-  const hideNavAndFooter = ["/login", "/register"];
-  const shouldHide = hideNavAndFooter.includes(location.pathname);
+  const hideNavAndFooterPaths = ["/login", "/register", "/dashboard"];
+
+  const shouldHide = hideNavAndFooterPaths.some((path) =>
+    location.pathname.startsWith(path)
+  );
 
   return (
     <>

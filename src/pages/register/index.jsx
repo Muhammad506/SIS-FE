@@ -50,7 +50,14 @@ const Register = () => {
     }
 
     try {
-      await axios.post("http://localhost:5000/api/auth/register", {
+      // await axios.post("http://localhost:5000/api/auth/register", {
+      //   name: formData.name,
+      //   email: formData.email,
+      //   password: formData.password,
+      //   confirmation: formData.confirmPassword,
+      // });
+
+      await axios.post(`${import.meta.env.VITE_API_URL}/auth/register`, {
         name: formData.name,
         email: formData.email,
         password: formData.password,
@@ -74,7 +81,7 @@ const Register = () => {
       {/* Back Button */}
       <Link
         to="/"
-        className="absolute left-4 top-10 md:top-4 z-50 text-white border border-white text-xl bg-gradient hover:scale-105 duration-500 font-semibold rounded-3xl px-4 py-1  bg-opacity-50 shadow-lg hover:bg-opacity-70 transition"
+        className="absolute left-4 top-4 md:top-4 z-50 text-white border border-white text-xl bg-gradient hover:scale-105 duration-500 font-semibold rounded-3xl px-4 py-1  bg-opacity-50 shadow-lg hover:bg-opacity-70 transition"
       >
         Back
       </Link>

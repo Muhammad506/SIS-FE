@@ -30,7 +30,8 @@ const Login = () => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        // "http://localhost:5000/api/auth/login",
+        `${import.meta.env.VITE_API_URL}/auth/login`,
         { email, password }
       );
 
@@ -82,7 +83,7 @@ const Login = () => {
 
       {/* Right form */}
       <div className="flex flex-col items-center h-screen justify-center w-full max-w-md p-6 bg-[#0F172A] shadow-xl">
-        <img src="Logo.svg" alt="Logo" className="w-40 md:w-48 mb-4" />
+        <img src="Logo.svg" alt="Logo" className="w-64 mb-4 mt-9 md:mt-0" />
         <h1 className="font-bold text-3xl md:text-4xl xl:text-5xl text-yellow mb-4 text-center">
           Login
         </h1>
