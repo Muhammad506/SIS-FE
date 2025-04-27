@@ -14,6 +14,7 @@ import Contact from "./pages/contact";
 import Login from "./pages/login";
 import Register from "./pages/register";
 import Dashboard from "./pages/dashboard";
+import ActivePlates from "./components/dashboard/active-plates";
 
 const App = () => {
   return (
@@ -40,13 +41,23 @@ const Layout = () => {
     <>
       {!shouldHide && <NavBar />}
       <Routes>
+        {/* Normal public pages */}
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/features" element={<Features />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+
+        {/* Dashboard with nested pages */}
+        <Route path="/dashboard" element={<Dashboard />}>
+          <Route
+            index
+            element={<div className="p-4">Welcome to Dashboard</div>}
+          />
+          <Route path="active-plates" element={<ActivePlates />} />
+          {/* You can add more dashboard sub-pages here similarly */}
+        </Route>
       </Routes>
       {!shouldHide && <Footer />}
     </>
