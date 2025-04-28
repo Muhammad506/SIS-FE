@@ -15,6 +15,8 @@ import Login from "./pages/login";
 import Register from "./pages/register";
 import Dashboard from "./pages/dashboard";
 import ActivePlates from "./components/dashboard/active-plates";
+import ForgotPassword from "./pages/forgot-pass";
+import ResetPassword from "./pages/reset-pass";
 
 const App = () => {
   return (
@@ -31,7 +33,13 @@ const Layout = () => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
-  const hideNavAndFooterPaths = ["/login", "/register", "/dashboard"];
+  const hideNavAndFooterPaths = [
+    "/login",
+    "/register",
+    "/forgot-password",
+    "/dashboard",
+    "/reset-password/",
+  ];
 
   const shouldHide = hideNavAndFooterPaths.some((path) =>
     location.pathname.startsWith(path)
@@ -48,6 +56,8 @@ const Layout = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password/:token" element={<ResetPassword />} />
 
         {/* Dashboard with nested pages */}
         <Route path="/dashboard" element={<Dashboard />}>
