@@ -22,7 +22,7 @@ const Contact = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/send-contact",
+        `${import.meta.env.VITE_API_URL}/contact/send-contact`,
         formData
       );
       console.log("Form submitted:", response.data);
