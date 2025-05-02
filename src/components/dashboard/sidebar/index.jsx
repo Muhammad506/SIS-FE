@@ -7,7 +7,7 @@ import { TbHeartRateMonitor } from "react-icons/tb";
 
 // Static menu items to avoid re-creating on every render
 const menuItems = [
-  { name: "Dashboard", icon: <FiHome />, link: "/dashboard" },
+  { name: "Dashboard", icon: <FiHome />, link: "/dashboard/home" },
   {
     name: "Active Plates",
     icon: <VscLayersActive />,

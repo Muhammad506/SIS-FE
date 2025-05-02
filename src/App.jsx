@@ -17,6 +17,7 @@ import Dashboard from "./pages/dashboard";
 import ActivePlates from "./components/dashboard/active-plates";
 import ForgotPassword from "./pages/forgot-pass";
 import ResetPassword from "./pages/reset-pass";
+import IotDashboard from "./components/dashboard/home";
 
 const App = () => {
   return (
@@ -66,6 +67,8 @@ const Layout = () => {
             element={<div className="p-4">Welcome to Dashboard</div>}
           />
           <Route path="active-plates" element={<ActivePlates />} />
+          <Route path="home" element={<IotDashboard />} />
+
           {/* You can add more dashboard sub-pages here similarly */}
         </Route>
       </Routes>
