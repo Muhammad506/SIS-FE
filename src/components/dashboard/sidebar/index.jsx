@@ -7,7 +7,7 @@ import { TbHeartRateMonitor } from "react-icons/tb";
 
 // Static menu items to avoid re-creating on every render
 const menuItems = [
-  { name: "Dashboard", icon: <FiHome />, link: "/dashboard/home" },
+  { name: "Dashboard", icon: <FiHome />, link: "/dashboard" },
   {
     name: "Active Plates",
     icon: <VscLayersActive />,
@@ -18,20 +18,16 @@ const menuItems = [
     icon: <FiPower />,
     link: "/dashboard/power-generated",
   },
-  {
-    name: "Energy Savings",
-    icon: <MdOutlineEnergySavingsLeaf />,
-    link: "/dashboard/energy-savings",
-  },
+
   {
     name: "Battery Status",
     icon: <FiBatteryCharging />,
-    link: "/dashboard/battery-status",
+    link: "/dashboard/battery",
   },
   {
     name: "Systems Monitored",
     icon: <TbHeartRateMonitor />,
-    link: "/dashboard/total-system-monitored",
+    link: "/dashboard/controller",
   },
 ];
 

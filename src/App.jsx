@@ -15,9 +15,13 @@ import Login from "./pages/login";
 import Register from "./pages/register";
 import Dashboard from "./pages/dashboard";
 import ActivePlates from "./components/dashboard/active-plates";
-import ForgotPassword from "./pages/forgot-pass";
-import ResetPassword from "./pages/reset-pass";
 import IotDashboard from "./components/dashboard/home";
+import BatteryPage from "./components/dashboard/battery";
+import PowerPage from "./components/dashboard/energy-usage";
+import ControlPage from "./components/dashboard/controller";
+import ForgotPassword from "./pages/forgot-pass/forgetPassword";
+import ResetPassword from "./pages/forgot-pass/resetPassword";
+import VerifyCode from "./pages/forgot-pass/verifyCode";
 
 const App = () => {
   return (
@@ -39,7 +43,8 @@ const Layout = () => {
     "/register",
     "/forgot-password",
     "/dashboard",
-    "/reset-password/",
+    "/reset-password",
+    "/verify-code",
   ];
 
   const shouldHide = hideNavAndFooterPaths.some((path) =>
@@ -58,16 +63,20 @@ const Layout = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
-        <Route path="/reset-password/:token" element={<ResetPassword />} />
+        <Route path="/verify-code" element={<VerifyCode />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
 
         {/* Dashboard with nested pages */}
         <Route path="/dashboard" element={<Dashboard />}>
-          <Route
+          {/* <Route
             index
             element={<div className="p-4">Welcome to Dashboard</div>}
-          />
+          /> */}
           <Route path="active-plates" element={<ActivePlates />} />
-          <Route path="home" element={<IotDashboard />} />
+          <Route path="/dashboard" element={<IotDashboard />} />
+          <Route path="battery" element={<BatteryPage />} />
+          <Route path="power-generated" element={<PowerPage />} />
+          <Route path="controller" element={<ControlPage />} />
 
           {/* You can add more dashboard sub-pages here similarly */}
         </Route>
