@@ -68,10 +68,6 @@ const Layout = () => {
 
         {/* Dashboard with nested pages */}
         <Route path="/dashboard" element={<Dashboard />}>
-          {/* <Route
-            index
-            element={<div className="p-4">Welcome to Dashboard</div>}
-          /> */}
           <Route path="active-plates" element={<ActivePlates />} />
           <Route path="/dashboard" element={<IotDashboard />} />
           <Route path="battery" element={<BatteryPage />} />

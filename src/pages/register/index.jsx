@@ -50,13 +50,6 @@ const Register = () => {
     }
 
     try {
-      // await axios.post("http://localhost:5000/api/auth/register", {
-      //   name: formData.name,
-      //   email: formData.email,
-      //   password: formData.password,
-      //   confirmation: formData.confirmPassword,
-      // });
-
       await axios.post(`${import.meta.env.VITE_API_URL}/auth/register`, {
         name: formData.name,
         email: formData.email,
@@ -219,7 +212,7 @@ const Register = () => {
           <div className="flex flex-col justify-center items-center space-y-2">
             <button
               type="submit"
-              className="w-full bg-yellow text-black cursor-pointer px-8 py-2 rounded-xl font-bold text-lg hover:brightness-110 transition disabled:opacity-70 disabled:cursor-not-allowed"
+              className="w-full bg-yellow text-black cursor-pointer px-8 py-2 rounded-xl font-semibold text-lg hover:brightness-110 transition disabled:opacity-70 disabled:cursor-not-allowed"
               disabled={loading}
             >
               {loading ? "Registering..." : "Register"}

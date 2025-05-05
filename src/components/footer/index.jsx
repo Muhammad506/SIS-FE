@@ -1,4 +1,5 @@
 import { FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -19,10 +20,46 @@ const Footer = () => {
         {/* Quick Links Section */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-4 xl:ml-28">
           <h2 className="text-lg font-semibold text-yellow">Quick Links</h2>
-          <p className="text-sm">Home</p>
-          <p className="text-sm">About Us</p>
-          <p className="text-sm">Features</p>
-          <p className="text-sm">Contact Us</p>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive
+                ? "text-yellow-400 font-semibold text-sm"
+                : "text-sm hover:underline"
+            }
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive
+                ? "text-yellow-400 font-semibold text-sm"
+                : "text-sm hover:underline"
+            }
+          >
+            About Us
+          </NavLink>
+          <NavLink
+            to="/features"
+            className={({ isActive }) =>
+              isActive
+                ? "text-yellow-400 font-semibold text-sm"
+                : "text-sm hover:underline"
+            }
+          >
+            Features
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              isActive
+                ? "text-yellow-400 font-semibold text-sm"
+                : "text-sm hover:underline"
+            }
+          >
+            Contact Us
+          </NavLink>
         </div>
 
         {/* Contact & Social Media Section */}
@@ -31,9 +68,27 @@ const Footer = () => {
           <p className="text-sm">Email: info@solarintelli.com</p>
           <p className="text-sm">Phone: +123 456 7890</p>
           <div className="flex gap-6 pt-4">
-            <FaGithub className="w-8 h-8 hover:text-yellow-400 cursor-pointer" />
-            <FaInstagram className="w-8 h-8 hover:text-yellow-400 cursor-pointer" />
-            <FaTwitter className="w-8 h-8 hover:text-yellow-400 cursor-pointer" />
+            <a
+              href="https://github.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub className="w-8 h-8 hover:text-yellow-400 cursor-pointer" />
+            </a>
+            <a
+              href="https://instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram className="w-8 h-8 hover:text-yellow-400 cursor-pointer" />
+            </a>
+            <a
+              href="https://twitter.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTwitter className="w-8 h-8 hover:text-yellow-400 cursor-pointer" />
+            </a>
           </div>
         </div>
       </div>
